@@ -26,8 +26,8 @@ modules:
   - name: GDAL
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.2.2/gdal-3.2.2.tar.gz
-        sha256: 3313e1b0e75de58da4e15a68a9b55e7c04509d3e0e274311dfffe996f6da1a2a
+        url: https://download.osgeo.org/gdal/3.4.1/gdal-3.4.1.tar.gz
+        sha256: e360387bc25ec24940f46afbeada48002d72c74aaf9eccf2a40e8d74e711a2e4
         x-checker-data:
           type: anitya
           project-id: 881
@@ -40,8 +40,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/8.0.0/proj-8.0.0.tar.gz
-            sha256: aa5d4b934450149a350aed7e5fbac880e2f7d3fa2f251c26cb64228f96a2109e
+            url: https://github.com/OSGeo/PROJ/releases/download/8.2.1/proj-8.2.1.tar.gz
+            sha256: 76ed3d0c3a348a6693dfae535e5658bbfd47f71cb7ff7eb96d9f12f7e068b1cf
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -154,8 +154,8 @@ modules:
     buildsystem: cmake-ninja
     build-options:
       env:
-        LIBRARY_PATH: "/app/lib:/usr/lib"
-        LD_LIBRARY_PATH: "/app/lib:/usr/lib"
+        LIBRARY_PATH: /app/lib:/usr/lib
+        LD_LIBRARY_PATH: /app/lib:/usr/lib
         PATH: /app/bin:/usr/bin:/usr/lib/sdk/openjdk17/bin
         JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
     config-opts:
