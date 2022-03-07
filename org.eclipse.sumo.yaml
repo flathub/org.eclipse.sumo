@@ -178,7 +178,7 @@ modules:
       - install -Dm0644  -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build/package/sumo.png
       - install -Dm0644 build/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 build/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
-      - install -Dm0644 -t ${FLATPAK_DEST}/share/metainfo/ org.eclipse.sumo.metainfo.xml
+      - install -Dm0644 build/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: git
         url: https://github.com/eclipse/sumo.git
@@ -187,5 +187,3 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-      - type: file
-        path: org.eclipse.sumo.metainfo.xml
