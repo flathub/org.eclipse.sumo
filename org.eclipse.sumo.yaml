@@ -182,8 +182,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/eclipse/sumo.git
-        tag: v1_13_0
-        commit: 4b5bca80615f1d7a6f844e0c6368df7f41ba4ea1
+        tag: v1_14_0
+        commit: 58abfe34cdaf638c696ebd4d3660934f061ad94a
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
