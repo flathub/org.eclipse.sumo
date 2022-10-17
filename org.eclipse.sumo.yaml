@@ -187,4 +187,4 @@ modules:
           type: anitya
           project-id: 241872
           stable-only: true
-          url-template: https://github.com/eclipse/sumo/archive/refs/tags/v1_14_1.tar.gz
+          url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
