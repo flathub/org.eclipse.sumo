@@ -1,7 +1,7 @@
 app-id: org.eclipse.sumo
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '22.08'
+runtime-version: '21.08' #openscenegraph still relie on older version of ffmpeg
 command: sumo-gui
 rename-icon: sumo
 sdk-extensions:
@@ -132,8 +132,12 @@ modules:
 
   - name: openscenegraph
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
+    # build-options:
+    #   cflags: -Wdeprecated-copy
+    #   cxxflags: -Wdeprecated-copy
+    # config-opts:
+    #   # - -DCMAKE_BUILD_TYPE=Release
+    #   - -DOSG_FIND_3RD_PARTY_DEPS=OFF
     sources:
       - type: archive
         url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
@@ -153,8 +157,8 @@ modules:
   - name: SUMO
     buildsystem: cmake-ninja
     build-options:
-      cflags: -fpermissive
-      cxxflags: -fpermissive
+    #   cflags: -fpermissive
+    #   cxxflags: -fpermissive
       env:
         LIBRARY_PATH: /app/lib:/usr/lib
         LD_LIBRARY_PATH: /app/lib:/usr/lib
