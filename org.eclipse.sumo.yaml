@@ -26,8 +26,8 @@ modules:
   - name: GDAL
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.5.3/gdal-3.5.3.tar.gz
-        sha256: a9ea0300d17e35bab71df4f16e62bb2fb8081caf994ab3ee0502ce4cf0d4e593
+        url: https://download.osgeo.org/gdal/3.6.0/gdal-3.6.0.tar.gz
+        sha256: 0d6a79eec0c6afb97c7172e429ec05c9d15d3917987ad686a914b292c83531db
         x-checker-data:
           type: anitya
           project-id: 881
