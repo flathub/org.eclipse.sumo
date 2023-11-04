@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.7.2/gdal-3.7.2.tar.gz
-        sha256: fd8aabc63e02bcce2aecc0234af58171b91f478b6111f75b4b236919dac369a5
+        url: https://download.osgeo.org/gdal/3.7.3/gdal-3.7.3.tar.gz
+        sha256: f66161e10b8b89a8a541cd760cd36d490114ed3f020a26db1489a6154db5d2be
         x-checker-data:
           type: anitya
           project-id: 881
