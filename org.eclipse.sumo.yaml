@@ -1,7 +1,7 @@
 app-id: org.eclipse.sumo
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '22.08' #openscenegraph still relie on older version of ffmpeg
+runtime-version: '21.08' #openscenegraph still relie on older version of ffmpeg
 command: sumo-gui
 rename-icon: sumo
 sdk-extensions:
