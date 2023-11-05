@@ -8,8 +8,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
 finish-args:
   - --share=ipc
-  # - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --device=dri
   - --filesystem=home
 cleanup:
@@ -29,8 +28,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.7.2/gdal-3.7.2.tar.gz
-        sha256: fd8aabc63e02bcce2aecc0234af58171b91f478b6111f75b4b236919dac369a5
+        url: https://download.osgeo.org/gdal/3.7.3/gdal-3.7.3.tar.gz
+        sha256: f66161e10b8b89a8a541cd760cd36d490114ed3f020a26db1489a6154db5d2be
         x-checker-data:
           type: anitya
           project-id: 881
@@ -135,12 +134,6 @@ modules:
 
   - name: openscenegraph
     buildsystem: cmake-ninja
-    # build-options:
-    #   cflags: -Wdeprecated-copy
-    #   cxxflags: -Wdeprecated-copy
-    # config-opts:
-    #   # - -DCMAKE_BUILD_TYPE=Release
-    #   - -DOSG_FIND_3RD_PARTY_DEPS=OFF
     sources:
       - type: archive
         url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
@@ -160,8 +153,6 @@ modules:
   - name: SUMO
     buildsystem: cmake-ninja
     build-options:
-    #   cflags: -fpermissive
-    #   cxxflags: -fpermissive
       env:
         LIBRARY_PATH: /app/lib:/usr/lib
         LD_LIBRARY_PATH: /app/lib:/usr/lib
