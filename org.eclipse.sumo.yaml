@@ -181,8 +181,8 @@ modules:
       - install -Dm0644 build/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_18_0.tar.gz
-        sha256: a511ca452180dd9d91f8eb57805db4b3a4e93f653750054981016447c5a46e85
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_19_0.tar.gz
+        sha256: 4dc56e66f994b4f1378e357e2c40df55035eac29851252da2f5399b86370f249
         x-checker-data:
           type: anitya
           project-id: 241872
