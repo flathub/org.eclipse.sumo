@@ -161,9 +161,6 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DSUMO_UTILS:BOOL=true
-      - -DFMI:BOOL=true
-      - -DCHECK_OPTIONAL_LIBS:BOOL=true
-      - -DENABLE_JAVA_BINDINGS=1
       - -DJava_JAVA_EXECUTABLE=/app/jre/bin
       - -DJava_JAR_EXECUTABLE=/app/jdk/bin
       - -DJava_JAVAC_EXECUTABLE=/app/jdk/bin
@@ -176,13 +173,13 @@ modules:
       - -DMVN_EXECUTABLE=
     post-install:
       - install -Dm0644  -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build/package/sumo.png
-      - install -Dm0644 build/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm0644 build/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
-      - install -Dm0644 build/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
+      - install -Dm0644 build_config/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm0644 build_config/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
+      - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_19_0.tar.gz
-        sha256: 4dc56e66f994b4f1378e357e2c40df55035eac29851252da2f5399b86370f249
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_20_0.tar.gz
+        sha256: fa4beb16fbf783582fc722d8c1f4820bd399cba825d6c12cade6e499d5ff4d3f
         x-checker-data:
           type: anitya
           project-id: 241872
