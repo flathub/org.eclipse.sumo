@@ -74,8 +74,8 @@ modules:
       - -Dtranscoder=icu
     sources:
       - type: archive
-        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.2.5.tar.xz
-        sha256: 6239e6035645b21bc9bf7f02004db334dce3fe6d85428ee4fe7e180c2d948230
+        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.3.0.tar.xz
+        sha256: a83e12af82dc4fea09c592979fdbb6f206eeaa968562d7d18a0a4dd032c51267
         x-checker-data:
           type: anitya
           project-id: 5182
