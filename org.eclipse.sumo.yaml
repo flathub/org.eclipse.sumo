@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.9.2/gdal-3.9.2.tar.gz
-        sha256: c9767e79ca7245f704bfbcb47d771b2dc317d743536b78d648c3e92b95fbc21e
+        url: https://download.osgeo.org/gdal/3.9.3/gdal-3.9.3.tar.gz
+        sha256: f293d8ccc6b98f617db88f8593eae37f7e4b32d49a615b2cba5ced12c7bebdae
         x-checker-data:
           type: anitya
           project-id: 881
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.2.1/swig-4.2.1.tar.gz
-        sha256: fa045354e2d048b2cddc69579e4256245d4676894858fcf0bab2290ecf59b7d8
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.3.0/swig-4.3.0.tar.gz
+        sha256: f7203ef796f61af986c70c05816236cbd0d31b7aa9631e5ab53020ab7804aa9e
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -74,8 +74,8 @@ modules:
       - -Dtranscoder=icu
     sources:
       - type: archive
-        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.2.5.tar.xz
-        sha256: 6239e6035645b21bc9bf7f02004db334dce3fe6d85428ee4fe7e180c2d948230
+        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.3.0.tar.xz
+        sha256: a83e12af82dc4fea09c592979fdbb6f206eeaa968562d7d18a0a4dd032c51267
         x-checker-data:
           type: anitya
           project-id: 5182
