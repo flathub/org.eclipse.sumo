@@ -225,6 +225,10 @@ modules:
       - install -Dm0644  -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/sumo.png
       - install -Dm0644 build_config/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 build_config/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
+      - install -Dm0644 build_config/package/netedit.desktop ${FLATPAK_DEST}/share/applications/netedit.desktop
+      - install -Dm0644 build_config/package/netedit.xml ${FLATPAK_DEST}/share/mime/application/netedit.xml
+      - install -Dm0644 build_config/package/osmWebWizard.desktop ${FLATPAK_DEST}/share/applications/osmWebWizard.desktop
+      - install -Dm0644 build_config/package/osmWebWizard.xml ${FLATPAK_DEST}/share/mime/application/osmWebWizard.xml
       - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: archive
