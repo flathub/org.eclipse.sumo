@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.10.2/gdal-3.10.2.tar.gz
-        sha256: ca710aab81eb4d638f5dbd4f03d4d4b902aeb6ee73a3d4a8c5e966b6b648b0da
+        url: https://download.osgeo.org/gdal/3.10.3/gdal-3.10.3.tar.gz
+        sha256: e4bf7f104acbcb3e2d16c97fd1af2b92b28d0ba59d17d976e3ef08b794f4153b
         x-checker-data:
           type: anitya
           project-id: 881
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.3.0/swig-4.3.0.tar.gz
-        sha256: f7203ef796f61af986c70c05816236cbd0d31b7aa9631e5ab53020ab7804aa9e
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.3.1/swig-4.3.1.tar.gz
+        sha256: 44fc829f70f1e17d635a2b4d69acab38896699ecc24aa023e516e0eabbec61b8
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -228,8 +228,8 @@ modules:
       - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_22_0.tar.gz
-        sha256: a97c624c42b161feb88328bb2410c0ed13e06c10b3087a452c7f3522e64c8d6e
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_23_0.tar.gz
+        sha256: 64229ccfb294c2eeeede6015cd2bdbd0f80d014541bb36c1daf79daf9f938625
         x-checker-data:
           type: anitya
           project-id: 241872
