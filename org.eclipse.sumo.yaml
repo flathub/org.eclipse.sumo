@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.9.1/gdal-3.9.1.tar.gz
-        sha256: 46cd95ad0f270af0cd317ddc28fa5e0a7ad0b0fd160a7bd22909150df53e3418
+        url: https://download.osgeo.org/gdal/3.10.3/gdal-3.10.3.tar.gz
+        sha256: e4bf7f104acbcb3e2d16c97fd1af2b92b28d0ba59d17d976e3ef08b794f4153b
         x-checker-data:
           type: anitya
           project-id: 881
@@ -43,8 +43,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/9.4.1/proj-9.4.1.tar.gz
-            sha256: ffe20170ee2b952207adf8a195e2141eab12cda181e49fdeb54425d98c7171d7
+            url: https://github.com/OSGeo/PROJ/releases/download/9.6.0/proj-9.6.0.tar.gz
+            sha256: d8cae521c311c39513193657e75767f7cfbf2f91bd202fcd4a200028d3b57e14
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.2.1/swig-4.2.1.tar.gz
-        sha256: fa045354e2d048b2cddc69579e4256245d4676894858fcf0bab2290ecf59b7d8
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.3.1/swig-4.3.1.tar.gz
+        sha256: 44fc829f70f1e17d635a2b4d69acab38896699ecc24aa023e516e0eabbec61b8
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -74,8 +74,8 @@ modules:
       - -Dtranscoder=icu
     sources:
       - type: archive
-        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.2.5.tar.xz
-        sha256: 6239e6035645b21bc9bf7f02004db334dce3fe6d85428ee4fe7e180c2d948230
+        url: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-3.3.0.tar.xz
+        sha256: a83e12af82dc4fea09c592979fdbb6f206eeaa968562d7d18a0a4dd032c51267
         x-checker-data:
           type: anitya
           project-id: 5182
@@ -222,14 +222,18 @@ modules:
       - -DJAVA_AWT_INCLUDE_PATH=/app/jdk/include
       - -DMVN_EXECUTABLE=
     post-install:
-      - install -Dm0644  -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/sumo.png
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/sumo.png
       - install -Dm0644 build_config/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/netedit.png
+      - install -Dm0644 build_config/package/netedit.desktop ${FLATPAK_DEST}/share/applications/netedit.desktop
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/osmWebWizard.png
+      - install -Dm0644 build_config/package/osmWebWizard.desktop ${FLATPAK_DEST}/share/applications/osmWebWizard.desktop
       - install -Dm0644 build_config/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
       - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.eclipse.sumo.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_20_0.tar.gz
-        sha256: fa4beb16fbf783582fc722d8c1f4820bd399cba825d6c12cade6e499d5ff4d3f
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_23_0.tar.gz
+        sha256: 64229ccfb294c2eeeede6015cd2bdbd0f80d014541bb36c1daf79daf9f938625
         x-checker-data:
           type: anitya
           project-id: 241872
