@@ -1,9 +1,8 @@
 app-id: org.eclipse.sumo
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '23.08'
+runtime-version: '24.08'
 command: sumo-gui
-# rename-icon: sumo
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
 finish-args:
@@ -67,7 +66,6 @@ modules:
     builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
-      - -DCMAKE_INSTALL_PREFIX=/app
       - -DBUILD_SHARED_LIBS=ON
       - -DCMAKE_POSITION_INDEPENDENT_CODE=ON
       - -Dnetwork-accessor=curl
@@ -80,6 +78,9 @@ modules:
           type: anitya
           project-id: 5182
           url-template: https://dlcdn.apache.org//xerces/c/3/sources/xerces-c-$version.tar.xz
+        # From https://bugs.gentoo.org/931105
+      - type: patch
+        path: xerces1.patch
   - name: gl2ps
     buildsystem: cmake-ninja
     config-opts:
