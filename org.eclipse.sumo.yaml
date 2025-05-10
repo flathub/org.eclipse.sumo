@@ -7,6 +7,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
 finish-args:
   - --share=ipc
+  - --share=network  # for the osmWebWizard
   - --socket=x11
   - --device=dri
   - --filesystem=home
