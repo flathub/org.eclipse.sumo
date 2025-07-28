@@ -238,10 +238,12 @@ modules:
       - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_23_1.tar.gz
-        sha256: ff00887665754f4a40dbe391d6b442a1b25245dbe0019442ff7816d6b52f286e
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_24_0.tar.gz
+        sha256: c592a6a4983eb9ae1c9bd147b03263cf7ef39664699afe1ebac5ad69dc01e120
         x-checker-data:
           type: anitya
           project-id: 241872
           stable-only: true
           url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
+      - type: patch
+        path: gcc9.patch
