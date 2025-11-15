@@ -225,21 +225,14 @@ modules:
       - -DMVN_EXECUTABLE=
     post-install:
       - ln -s ../share/sumo/tools/osmWebWizard.py ${FLATPAK_DEST}/bin/osmWebWizard.py
-      - install -Dm0644 build_config/package/sumo.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
-      - install -Dm0644 build_config/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm0644 build_config/package/netedit.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.netedit.png
-      - install -Dm0644 build_config/package/netedit.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.netedit.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID}.netedit ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.netedit.desktop
-      - install -Dm0644 build_config/package/osmWebWizard.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.osmWebWizard.png
-      - install -Dm0644 build_config/package/osmWebWizard.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.osmWebWizard.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID}.osmWebWizard ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.osmWebWizard.desktop
-      - install -Dm0644 build_config/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
-      - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm0644 build_config/package/*.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/
+      - install -Dm0644 build_config/package/*.desktop ${FLATPAK_DEST}/share/applications/
+      - install -Dm0644 build_config/package/${FLATPAK_ID}.xml ${FLATPAK_DEST}/share/mime/application/
+      - install -Dm0644 build_config/package/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_24_0.tar.gz
-        sha256: c592a6a4983eb9ae1c9bd147b03263cf7ef39664699afe1ebac5ad69dc01e120
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_25_0.tar.gz
+        sha256: 7944f574288db2ec46648fa4b49fbff2023263b4562f6068e38e9b25b2059f9e
         x-checker-data:
           type: anitya
           project-id: 241872
