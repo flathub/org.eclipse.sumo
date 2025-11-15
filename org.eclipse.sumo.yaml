@@ -238,5 +238,3 @@ modules:
           project-id: 241872
           stable-only: true
           url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
-      - type: patch
-        path: gcc9.patch
