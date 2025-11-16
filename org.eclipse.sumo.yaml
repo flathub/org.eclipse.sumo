@@ -225,17 +225,10 @@ modules:
       - -DMVN_EXECUTABLE=
     post-install:
       - ln -s ../share/sumo/tools/osmWebWizard.py ${FLATPAK_DEST}/bin/osmWebWizard.py
-      - install -Dm0644 build_config/package/sumo.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
-      - install -Dm0644 build_config/package/sumo.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm0644 build_config/package/netedit.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.netedit.png
-      - install -Dm0644 build_config/package/netedit.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.netedit.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID}.netedit ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.netedit.desktop
-      - install -Dm0644 build_config/package/osmWebWizard.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.osmWebWizard.png
-      - install -Dm0644 build_config/package/osmWebWizard.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.osmWebWizard.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID}.osmWebWizard ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.osmWebWizard.desktop
-      - install -Dm0644 build_config/package/sumo.xml ${FLATPAK_DEST}/share/mime/application/${FLATPAK_ID}.xml
-      - install -Dm0644 build_config/package/sumo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/*.png
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/applications/               build_config/package/*.desktop
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/mime/application/           build_config/package/${FLATPAK_ID}.xml
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/metainfo/                   build_config/package/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
         url: https://github.com/eclipse/sumo/archive/refs/tags/v1_25_0.tar.gz
@@ -246,4 +239,4 @@ modules:
           stable-only: true
           url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
       - type: patch
-        path: gcc9.patch
+        path: cmake_setup_py.patch
