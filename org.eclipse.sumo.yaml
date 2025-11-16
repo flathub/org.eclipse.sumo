@@ -225,10 +225,10 @@ modules:
       - -DMVN_EXECUTABLE=
     post-install:
       - ln -s ../share/sumo/tools/osmWebWizard.py ${FLATPAK_DEST}/bin/osmWebWizard.py
-      - install -Dm0644 build_config/package/*.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/
-      - install -Dm0644 build_config/package/*.desktop ${FLATPAK_DEST}/share/applications/
-      - install -Dm0644 build_config/package/${FLATPAK_ID}.xml ${FLATPAK_DEST}/share/mime/application/
-      - install -Dm0644 build_config/package/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/ build_config/package/*.png
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/applications/               build_config/package/*.desktop
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/mime/application/           build_config/package/${FLATPAK_ID}.xml
+      - install -Dm0644 -t ${FLATPAK_DEST}/share/metainfo/                   build_config/package/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
         url: https://github.com/eclipse/sumo/archive/refs/tags/v1_25_0.tar.gz
