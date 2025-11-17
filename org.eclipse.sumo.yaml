@@ -265,4 +265,6 @@ modules:
           stable-only: true
           url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
       - type: patch
+        path: captions.patch
+      - type: patch
         path: cmake_setup_py.patch
