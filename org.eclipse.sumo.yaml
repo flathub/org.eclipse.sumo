@@ -122,6 +122,20 @@ modules:
           url-template: http://download.osgeo.org/geos/geos-$version.tar.bz2
           stable-only: true
 
+  - name: arrow
+    buildsystem: cmake-ninja
+    config-opts:
+      - -Scpp
+    sources:
+      - type: archive
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-22.0.0.tar.gz
+        sha256: 8a95e6c7b9bec2bc0058feb73efe38ad6cfd49a0c7094db29b37ecaa8ab16051
+        x-checker-data:
+          type: anitya
+          project-id: 20697
+          url-template: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-$version.tar.gz
+          stable-only: true
+
   - name: fox
     buildsystem: autotools
     config-opts:
