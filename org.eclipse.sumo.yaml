@@ -124,8 +124,7 @@ modules:
 
   - name: arrow
     buildsystem: cmake-ninja
-    config-opts:
-      - -Scpp
+    subdir: cpp
     sources:
       - type: archive
         url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-22.0.0.tar.gz
