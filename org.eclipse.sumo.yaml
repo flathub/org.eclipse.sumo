@@ -125,6 +125,8 @@ modules:
   - name: arrow
     buildsystem: cmake-ninja
     subdir: cpp
+    config-opts:
+      - -DARROW_MIMALLOC=OFF
     sources:
       - type: archive
         url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-22.0.0.tar.gz
