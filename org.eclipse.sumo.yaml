@@ -124,9 +124,13 @@ modules:
 
   - name: arrow
     buildsystem: cmake-ninja
+    build-options:
+      env:
+        ARROW_MIMALLOC_URL: cpp/thirdparty/mimalloc-v3.1.5.tar.gz
+        ARROW_XSIMD_URL: cpp/thirdparty/xsimd-13.0.0.tar.gz
     subdir: cpp
     config-opts:
-      - -DARROW_MIMALLOC=OFF
+      - -DARROW_PARQUET=ON
     sources:
       - type: archive
         url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-22.0.0.tar.gz
@@ -136,6 +140,14 @@ modules:
           project-id: 20697
           url-template: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-$version.tar.gz
           stable-only: true
+      - type: file
+        url: https://github.com/microsoft/mimalloc/archive/v3.1.5.tar.gz
+        sha256: 1c6949032069d5ebea438ec5cedd602d06f40a92ddf0f0d9dcff0993e5f6635c
+        dest: cpp/thirdparty/mimalloc-v3.1.5.tar.gz
+      - type: file
+        url: https://github.com/xtensor-stack/xsimd/archive/13.0.0.tar.gz
+        sha256: 8bdbbad0c3e7afa38d88d0d484d70a1671a1d8aefff03f4223ab2eb6a41110a3
+        dest: cpp/thirdparty/xsimd-13.0.0.tar.gz
 
   - name: fox
     buildsystem: autotools
