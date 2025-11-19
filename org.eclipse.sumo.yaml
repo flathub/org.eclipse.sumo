@@ -126,6 +126,9 @@ modules:
     buildsystem: cmake-ninja
     build-options:
       env:
+        ARROW_BOOST_URL: cpp/thirdparty/boost-1.88.0-cmake.tar.gz
+        ARROW_BROTLI_URL: cpp/thirdparty/brotli-v1.0.9.tar.gz
+        ARROW_BZIP2_URL: cpp/thirdparty/bzip2-1.0.8.tar.gz
         ARROW_MIMALLOC_URL: cpp/thirdparty/mimalloc-v3.1.5.tar.gz
         ARROW_XSIMD_URL: cpp/thirdparty/xsimd-13.0.0.tar.gz
     subdir: cpp
@@ -148,6 +151,18 @@ modules:
         url: https://github.com/xtensor-stack/xsimd/archive/13.0.0.tar.gz
         sha256: 8bdbbad0c3e7afa38d88d0d484d70a1671a1d8aefff03f4223ab2eb6a41110a3
         dest: cpp/thirdparty/xsimd-13.0.0.tar.gz
+      - type: file
+        url: https://github.com/boostorg/boost/releases/download/boost-1.88.0/boost-1.88.0-cmake.tar.gz
+        sha256: dcea50f40ba1ecfc448fdf886c0165cf3e525fef2c9e3e080b9804e8117b9694
+        dest: cpp/thirdparty/boost-1.88.0-cmake.tar.gz
+      - type: file
+        url: https://github.com/google/brotli/archive/v1.0.9.tar.gz
+        sha256: f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46
+        dest: cpp/thirdparty/brotli-v1.0.9.tar.gz
+      - type: file
+        url: https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+        sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+        dest: cpp/thirdparty/bzip2-1.0.8.tar.gz
 
   - name: fox
     buildsystem: autotools
