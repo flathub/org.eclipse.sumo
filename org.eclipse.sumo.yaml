@@ -343,7 +343,7 @@ modules:
         dest: cpp/thirdparty
         dest-filename: opentelemetry-proto-v1.7.0.tar.gz
       - type: file
-        url: https://www.apache.org/dyn/closer.lua/orc/orc-2.2.0/orc-2.2.0.tar.gz
+        url: https://www.apache.org/dyn/closer.lua/orc/orc-2.2.0/orc-2.2.0.tar.gz?action=download
         sha256: b15aca45a7e73ffbd1bbc36a78cd1422d41f07721092a25f43448e6e16f4763b
         dest: cpp/thirdparty
         dest-filename: orc-2.2.0.tar.gz
@@ -378,7 +378,7 @@ modules:
         dest: cpp/thirdparty
         dest-filename: substrait-v0.44.0.tar.gz
       - type: file
-        url: https://www.apache.org/dyn/closer.lua/thrift/0.22.0/thrift-0.22.0.tar.gz
+        url: https://www.apache.org/dyn/closer.lua/thrift/0.22.0/thrift-0.22.0.tar.gz?action=download
         sha256: 794a0e455787960d9f27ab92c38e34da27e8deeda7a5db0e59dc64a00df8a1e5
         dest: cpp/thirdparty
         dest-filename: thrift-0.22.0.tar.gz
