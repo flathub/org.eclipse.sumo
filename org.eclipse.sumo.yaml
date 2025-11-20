@@ -158,7 +158,7 @@ modules:
         ARROW_NLOHMANN_JSON_URL: /run/build/arrow/cpp/thirdparty/nlohmann-json-v3.12.0.tar.gz
         ARROW_OPENTELEMETRY_URL: /run/build/arrow/cpp/thirdparty/opentelemetry-cpp-v1.21.0.tar.gz
         ARROW_OPENTELEMETRY_PROTO_URL: /run/build/arrow/cpp/thirdparty/opentelemetry-proto-v1.7.0.tar.gz
-        ARROW_ORC_URL: /run/build/arrow/cpp/thirdparty/orc-2.2.1.tar.gz
+        ARROW_ORC_URL: /run/build/arrow/cpp/thirdparty/orc-2.2.0.tar.gz
         ARROW_PROTOBUF_URL: /run/build/arrow/cpp/thirdparty/protobuf-v21.3.tar.gz
         ARROW_RAPIDJSON_URL: /run/build/arrow/cpp/thirdparty/rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
         ARROW_RE2_URL: /run/build/arrow/cpp/thirdparty/re2-2023-03-01.tar.gz
@@ -343,10 +343,10 @@ modules:
         dest: cpp/thirdparty
         dest-filename: opentelemetry-proto-v1.7.0.tar.gz
       - type: file
-        url: https://www.apache.org/dyn/closer.lua/orc/orc-2.2.1/orc-2.2.1.tar.gz
-        sha256: 52fc762332442e8b05d7182f8c035f9e04d945b9a52be22ab69f28b3f37d4500
+        url: https://www.apache.org/dyn/closer.lua/orc/orc-2.2.0/orc-2.2.0.tar.gz
+        sha256: b15aca45a7e73ffbd1bbc36a78cd1422d41f07721092a25f43448e6e16f4763b
         dest: cpp/thirdparty
-        dest-filename: orc-2.2.1.tar.gz
+        dest-filename: orc-2.2.0.tar.gz
       - type: file
         url: https://github.com/google/protobuf/releases/download/v21.3/protobuf-all-21.3.tar.gz
         sha256: 2f723218f6cb709ae4cdc4fb5ed56a5951fc5d466f0128ce4c946b8c78c8c49f
