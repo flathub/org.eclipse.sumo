@@ -161,7 +161,7 @@ modules:
         ARROW_ORC_URL: /run/build/arrow/cpp/thirdparty/orc-2.2.0.tar.gz
         ARROW_PROTOBUF_URL: /run/build/arrow/cpp/thirdparty/protobuf-v21.3.tar.gz
         ARROW_RAPIDJSON_URL: /run/build/arrow/cpp/thirdparty/rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
-        ARROW_RE2_URL: /run/build/arrow/cpp/thirdparty/re2-2023-03-01.tar.gz
+        ARROW_RE2_URL: /run/build/arrow/cpp/thirdparty/re2-2022-06-01.tar.gz
         ARROW_S2N_TLS_URL: /run/build/arrow/cpp/thirdparty/s2n-v1.5.23.tar.gz
         ARROW_SNAPPY_URL: /run/build/arrow/cpp/thirdparty/snappy-1.2.2.tar.gz
         ARROW_SUBSTRAIT_URL: /run/build/arrow/cpp/thirdparty/substrait-v0.44.0.tar.gz
@@ -358,10 +358,10 @@ modules:
         dest: cpp/thirdparty
         dest-filename: rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
       - type: file
-        url: https://github.com/google/re2/archive/2023-03-01.tar.gz
-        sha256: 7a9a4824958586980926a300b4717202485c4b4115ac031822e29aa4ef207e48
+        url: https://github.com/google/re2/archive/2022-06-01.tar.gz
+        sha256: f89c61410a072e5cbcf8c27e3a778da7d6fd2f2b5b1445cd4f4508bee946ab0f
         dest: cpp/thirdparty
-        dest-filename: re2-2023-03-01.tar.gz
+        dest-filename: re2-2022-06-01.tar.gz
       - type: file
         url: https://github.com/aws/s2n-tls/archive/v1.5.23.tar.gz
         sha256: 81961ea5ae9313c987edfa579306ad4500bedfbf10caf84d8a5dcfc42aaf591f
