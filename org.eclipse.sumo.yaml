@@ -43,8 +43,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/9.7.0/proj-9.7.0.tar.gz
-            sha256: 65705ecd987b50bf63e15820ce6bd17c042feaabda981249831bd230f6689709
+            url: https://github.com/OSGeo/PROJ/releases/download/9.7.1/proj-9.7.1.tar.gz
+            sha256: 6c097dc803c561929cdfcc46e4bf9945ea977611fb31493ad14e88edaeae260f
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.0/swig-4.4.0.tar.gz
-        sha256: c3f8e5dcd68c18aa19847b33b0a1bb92f07e904c53ae9cf5ae4ff8727a72927e
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.1/swig-4.4.1.tar.gz
+        sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
         x-checker-data:
           type: anitya
           project-id: 4919
