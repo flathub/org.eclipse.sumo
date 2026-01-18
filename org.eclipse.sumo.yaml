@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.12.0/gdal-3.12.0.tar.gz
-        sha256: 44c95baabe6c1a047c1ebe5043e38dd73e4936bc4c481db14efbfd03342eab73
+        url: https://download.osgeo.org/gdal/3.12.1/gdal-3.12.1.tar.gz
+        sha256: 266cbadf8534d1de831db8834374afd95603e0a6af4f53d0547ae0d46bd3d2d1
         x-checker-data:
           type: anitya
           project-id: 881
@@ -43,8 +43,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/9.7.0/proj-9.7.0.tar.gz
-            sha256: 65705ecd987b50bf63e15820ce6bd17c042feaabda981249831bd230f6689709
+            url: https://github.com/OSGeo/PROJ/releases/download/9.7.1/proj-9.7.1.tar.gz
+            sha256: 6c097dc803c561929cdfcc46e4bf9945ea977611fb31493ad14e88edaeae260f
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.0/swig-4.4.0.tar.gz
-        sha256: c3f8e5dcd68c18aa19847b33b0a1bb92f07e904c53ae9cf5ae4ff8727a72927e
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.1/swig-4.4.1.tar.gz
+        sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -175,8 +175,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-22.0.0.tar.gz
-        sha256: 8a95e6c7b9bec2bc0058feb73efe38ad6cfd49a0c7094db29b37ecaa8ab16051
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-23.0.0.tar.gz
+        sha256: 7510f4b578febb3af5b3e93ad4616ae3cb680b0f651217ebb29f4c7e5ea952f3
         x-checker-data:
           type: anitya
           project-id: 20697
