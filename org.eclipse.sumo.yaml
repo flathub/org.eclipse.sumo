@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.12.1/gdal-3.12.1.tar.gz
-        sha256: 266cbadf8534d1de831db8834374afd95603e0a6af4f53d0547ae0d46bd3d2d1
+        url: https://download.osgeo.org/gdal/3.12.2/gdal-3.12.2.tar.gz
+        sha256: 458a899feea38000258144517fedc6662ebba255971669d2901ba77e9e8fbf79
         x-checker-data:
           type: anitya
           project-id: 881
@@ -175,8 +175,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-23.0.0.tar.gz
-        sha256: 7510f4b578febb3af5b3e93ad4616ae3cb680b0f651217ebb29f4c7e5ea952f3
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-23.0.1.tar.gz
+        sha256: 9a9a057bba3aa7080abc2ba8e7a079effa74626a4f308ac56bfce035d31ef1ac
         x-checker-data:
           type: anitya
           project-id: 20697
