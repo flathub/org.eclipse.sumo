@@ -43,8 +43,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/9.7.1/proj-9.7.1.tar.gz
-            sha256: 6c097dc803c561929cdfcc46e4bf9945ea977611fb31493ad14e88edaeae260f
+            url: https://github.com/OSGeo/PROJ/releases/download/9.8.1/proj-9.8.1.tar.gz
+            sha256: af5b731c145c1d13c4e3b4eeb7d167e94e845e440f71e3496b4ed8dae0291960
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -103,8 +103,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/PedestrianDynamics/jupedsim/archive/refs/tags/v1.3.1.tar.gz
-        sha256: 1057cc6385290d08997ad4dcbe2c6f7cdcfc50e8e541777fc03cefb0f9d00f30
+        url: https://github.com/PedestrianDynamics/jupedsim/archive/refs/tags/v1.3.2.tar.gz
+        sha256: 72f955af3091fdb3bcf6339277de54f902eac36c4d04f23dbad6b528cc211ba5
         x-checker-data:
           type: anitya
           project-id: 386815
@@ -175,8 +175,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-23.0.0.tar.gz
-        sha256: 7510f4b578febb3af5b3e93ad4616ae3cb680b0f651217ebb29f4c7e5ea952f3
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-23.0.1.tar.gz
+        sha256: 9a9a057bba3aa7080abc2ba8e7a079effa74626a4f308ac56bfce035d31ef1ac
         x-checker-data:
           type: anitya
           project-id: 20697
