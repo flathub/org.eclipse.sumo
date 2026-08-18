@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.13.0/gdal-3.13.0.tar.gz
-        sha256: 1eb8c56a8cea4d3c733d90a719540c1aab981e4eb15e03057092e69b2935ae73
+        url: https://download.osgeo.org/gdal/3.13.3/gdal-3.13.3.tar.gz
+        sha256: 5e0c388d83da2d686cc00a40272882432cdb54edff43d4af173e532844a0a0ea
         x-checker-data:
           type: anitya
           project-id: 881
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.1/swig-4.4.1.tar.gz
-        sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.5.0/swig-4.5.0.tar.gz
+        sha256: 22ae0e887f8cca8031a325c67d005207653200b40e71edb3f88780e28e47d0ff
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -178,8 +178,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-24.0.0.tar.gz
-        sha256: 94e18d188f26324c4da6bb3a723fec1536ae88b8308bada28d53c0b8d5206b28
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-25.0.1.tar.gz
+        sha256: 01ee19d023775e70692cf52e0efa2b8cc7b9b7257d17983b5f6c36a06288ce02
         x-checker-data:
           type: anitya
           project-id: 20697
