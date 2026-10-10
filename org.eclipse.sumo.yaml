@@ -178,8 +178,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-25.0.1.tar.gz
-        sha256: 01ee19d023775e70692cf52e0efa2b8cc7b9b7257d17983b5f6c36a06288ce02
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-24.0.0.tar.gz
+        sha256: 94e18d188f26324c4da6bb3a723fec1536ae88b8308bada28d53c0b8d5206b28
         x-checker-data:
           type: anitya
           project-id: 20697
