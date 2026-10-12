@@ -29,8 +29,8 @@ modules:
       - -DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
     sources:
       - type: archive
-        url: https://download.osgeo.org/gdal/3.13.0/gdal-3.13.0.tar.gz
-        sha256: 1eb8c56a8cea4d3c733d90a719540c1aab981e4eb15e03057092e69b2935ae73
+        url: https://download.osgeo.org/gdal/3.13.3/gdal-3.13.3.tar.gz
+        sha256: 5e0c388d83da2d686cc00a40272882432cdb54edff43d4af173e532844a0a0ea
         x-checker-data:
           type: anitya
           project-id: 881
@@ -43,8 +43,8 @@ modules:
           - -DBUILD_TESTING:BOOL=OFF
         sources:
           - type: archive
-            url: https://github.com/OSGeo/PROJ/releases/download/9.8.1/proj-9.8.1.tar.gz
-            sha256: af5b731c145c1d13c4e3b4eeb7d167e94e845e440f71e3496b4ed8dae0291960
+            url: https://github.com/OSGeo/PROJ/releases/download/9.9.0/proj-9.9.0.tar.gz
+            sha256: 791a0610547eeabb17006cfd49cdbd2034f3240f47ed5e88a1031811f4e2bcf3
             x-checker-data:
               type: anitya
               project-id: 9463
@@ -54,8 +54,8 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.4.1/swig-4.4.1.tar.gz
-        sha256: 40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.5.0/swig-4.5.0.tar.gz
+        sha256: 22ae0e887f8cca8031a325c67d005207653200b40e71edb3f88780e28e47d0ff
         x-checker-data:
           type: anitya
           project-id: 4919
@@ -115,8 +115,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: http://download.osgeo.org/geos/geos-3.14.1.tar.bz2
-        sha256: 3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716
+        url: http://download.osgeo.org/geos/geos-3.15.0.tar.bz2
+        sha256: d5e5192a686d065eaed082de14dd26244c5c8e02bff16b2c6cce3265f648e00e
         x-checker-data:
           type: anitya
           project-id: 13493
@@ -555,12 +555,10 @@ modules:
       - install -Dm0644 -t ${FLATPAK_DEST}/share/metainfo/                   build_config/package/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_27_1.tar.gz
-        sha256: a48f3f7d46886d4c8fd1b5f751ab892bdbdfb35d05420eababefdf6e8875cd8b
+        url: https://github.com/eclipse/sumo/archive/refs/tags/v1_28_0.tar.gz
+        sha256: 2f4d080fdfab9ab55e4e8fc18e28230b18155ed5b4b602fe238e5c623a80d03a
         x-checker-data:
           type: anitya
           project-id: 241872
           stable-only: true
           url-template: https://github.com/eclipse/sumo/archive/refs/tags/v$version.tar.gz
-      - type: patch
-        path: sumo_relwithdebinfo.patch
