@@ -54,13 +54,14 @@ modules:
   - name: SWIG
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/swig/files/swig/swig-4.5.0/swig-4.5.0.tar.gz
-        sha256: 22ae0e887f8cca8031a325c67d005207653200b40e71edb3f88780e28e47d0ff
+        url: https://sourceforge.net/projects/swig/files/swig/swig-4.5.1/swig-4.5.1.tar.gz
+        sha256: 7fec50b27deddab5455a9633780b6341eddfb96215a7619e93a76eb27178f653
         x-checker-data:
           type: anitya
           project-id: 4919
           stable-only: true
-          url-template: https://sourceforge.net/projects/swig/files/swig/swig-$version/swig-$version.tar.gz
+          url-template: 
+            https://sourceforge.net/projects/swig/files/swig/swig-$version/swig-$version.tar.gz
 
   - name: XercesC
     buildsystem: cmake-ninja
@@ -109,7 +110,8 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 386815
-          url-template: https://github.com/PedestrianDynamics/jupedsim/archive/refs/tags/v$version.tar.gz
+          url-template: 
+            https://github.com/PedestrianDynamics/jupedsim/archive/refs/tags/v$version.tar.gz
 
   - name: geos
     buildsystem: cmake-ninja
@@ -162,7 +164,8 @@ modules:
         ARROW_OPENTELEMETRY_PROTO_URL: /run/build/arrow/cpp/thirdparty/opentelemetry-proto-v1.7.0.tar.gz
         ARROW_ORC_URL: /run/build/arrow/cpp/thirdparty/orc-2.2.1.tar.gz
         ARROW_PROTOBUF_URL: /run/build/arrow/cpp/thirdparty/protobuf-v21.3.tar.gz
-        ARROW_RAPIDJSON_URL: /run/build/arrow/cpp/thirdparty/rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
+        ARROW_RAPIDJSON_URL: 
+          /run/build/arrow/cpp/thirdparty/rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
         ARROW_RE2_URL: /run/build/arrow/cpp/thirdparty/re2-2023-03-01.tar.gz
         ARROW_S2N_TLS_URL: /run/build/arrow/cpp/thirdparty/s2n-v1.7.0.tar.gz
         ARROW_SNAPPY_URL: /run/build/arrow/cpp/thirdparty/snappy-1.2.2.tar.gz
@@ -178,8 +181,8 @@ modules:
       - -DARROW_PARQUET=ON
     sources:
       - type: archive
-        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-24.0.0.tar.gz
-        sha256: 94e18d188f26324c4da6bb3a723fec1536ae88b8308bada28d53c0b8d5206b28
+        url: https://github.com/apache/arrow/archive/refs/tags/apache-arrow-26.0.0.tar.gz
+        sha256: d895810bdeb84b1fa3491c5b6985c190fd02b8ecfaa0952cd68125b4d2e70902
         x-checker-data:
           type: anitya
           project-id: 20697
@@ -266,7 +269,8 @@ modules:
         dest: cpp/thirdparty
         dest-filename: azure-sdk-for-cpp-azure-identity_1.9.0.tar.gz
       - type: file
-        url: https://github.com/boostorg/boost/releases/download/boost-1.88.0/boost-1.88.0-cmake.tar.gz
+        url: 
+          https://github.com/boostorg/boost/releases/download/boost-1.88.0/boost-1.88.0-cmake.tar.gz
         sha256: dcea50f40ba1ecfc448fdf886c0165cf3e525fef2c9e3e080b9804e8117b9694
         dest: cpp/thirdparty
         dest-filename: boost-1.88.0-cmake.tar.gz
@@ -281,7 +285,8 @@ modules:
         dest: cpp/thirdparty
         dest-filename: bzip2-1.0.8.tar.gz
       - type: file
-        url: https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
+        url: 
+          https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
         sha256: 4803c844ce20ce510ef0eb83f8ea41fa24ecaae9d280c468c582d2bb25b3913d
         dest: cpp/thirdparty
         dest-filename: cares-1.17.2.tar.gz
@@ -316,12 +321,14 @@ modules:
         dest: cpp/thirdparty
         dest-filename: grpc-v1.46.3.tar.gz
       - type: file
-        url: https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz
+        url: 
+          https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz
         sha256: 65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c
         dest: cpp/thirdparty
         dest-filename: gtest-1.17.0.tar.gz
       - type: file
-        url: https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
+        url: 
+          https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
         sha256: 2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa
         dest: cpp/thirdparty
         dest-filename: jemalloc-5.3.0.tar.bz2
@@ -341,27 +348,32 @@ modules:
         dest: cpp/thirdparty
         dest-filename: nlohmann-json-v3.12.0.tar.gz
       - type: file
-        url: https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.21.0.tar.gz
+        url: 
+          https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.21.0.tar.gz
         sha256: 98e5546f577a11b52a57faed1f4cc60d8c1daa44760eba393f43eab5a8ec46a2
         dest: cpp/thirdparty
         dest-filename: opentelemetry-cpp-v1.21.0.tar.gz
       - type: file
-        url: https://github.com/open-telemetry/opentelemetry-proto/archive/refs/tags/v1.7.0.tar.gz
+        url: 
+          https://github.com/open-telemetry/opentelemetry-proto/archive/refs/tags/v1.7.0.tar.gz
         sha256: 11330d850f5e24d34c4246bc8cb21fcd311e7565d219195713455a576bb11bed
         dest: cpp/thirdparty
         dest-filename: opentelemetry-proto-v1.7.0.tar.gz
       - type: file
-        url: https://www.apache.org/dyn/closer.lua/orc/orc-2.2.1/orc-2.2.1.tar.gz?action=download
+        url: 
+          https://www.apache.org/dyn/closer.lua/orc/orc-2.2.1/orc-2.2.1.tar.gz?action=download
         sha256: 52fc762332442e8b05d7182f8c035f9e04d945b9a52be22ab69f28b3f37d4500
         dest: cpp/thirdparty
         dest-filename: orc-2.2.1.tar.gz
       - type: file
-        url: https://github.com/google/protobuf/releases/download/v21.3/protobuf-all-21.3.tar.gz
+        url: 
+          https://github.com/google/protobuf/releases/download/v21.3/protobuf-all-21.3.tar.gz
         sha256: 2f723218f6cb709ae4cdc4fb5ed56a5951fc5d466f0128ce4c946b8c78c8c49f
         dest: cpp/thirdparty
         dest-filename: protobuf-v21.3.tar.gz
       - type: file
-        url: https://github.com/miloyip/rapidjson/archive/232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
+        url: 
+          https://github.com/miloyip/rapidjson/archive/232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
         sha256: b9290a9a6d444c8e049bd589ab804e0ccf2b05dc5984a19ed5ae75d090064806
         dest: cpp/thirdparty
         dest-filename: rapidjson-232389d4f1012dddec4ef84861face2d2ba85709.tar.gz
@@ -386,7 +398,8 @@ modules:
         dest: cpp/thirdparty
         dest-filename: substrait-v0.44.0.tar.gz
       - type: file
-        url: https://www.apache.org/dyn/closer.lua/thrift/0.22.0/thrift-0.22.0.tar.gz?action=download
+        url: 
+          https://www.apache.org/dyn/closer.lua/thrift/0.22.0/thrift-0.22.0.tar.gz?action=download
         sha256: 794a0e455787960d9f27ab92c38e34da27e8deeda7a5db0e59dc64a00df8a1e5
         dest: cpp/thirdparty
         dest-filename: thrift-0.22.0.tar.gz
@@ -512,13 +525,15 @@ modules:
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
-        url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
+        url: 
+          https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
         sha256: aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
         x-checker-data:
           type: anitya
           project-id: 6848
           stable-only: true
-          url-template: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-$version.tar.gz
+          url-template: 
+            https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-$version.tar.gz
 
   - name: openjdk
     buildsystem: simple
